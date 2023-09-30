@@ -27,15 +27,75 @@ const jsUser = {
 // jsUser.emails = "anurag@microsoft.com"
 
 // Object.freeze(jsUser) // to make it unchangable or constant after using freez it dosent show any error but still not propgate
-jsUser.emails = "anurag@apple.com"
-console.log(jsUser); //here emaols value are not changed here still value is remains pf freez funtion
+// jsUser.emails = "anurag@apple.com"
+// console.log(jsUser); //here emaols value are not changed here still value is remains pf freez funtion
 
 
-jsUser.greeting = function(){
-    console.log("hello js users");
+// jsUser.greeting = function(){
+//     console.log("hello js users");
+// }
+
+// jsUser.greetingTwo = function(){
+//     console.log(`Hello js user,${this.name}`)
+// }
+
+// console.log(jsUser.greeting());
+// console.log(jsUser.greetingTwo());
+
+const regularUser = {
+    emails:"some@gmail.com",
+    fullName :{
+        userFullName:{
+            firstName:"anurag ",
+            lastName:"singh"
+        }
+    }
 }
+//console.log(regularUser.fullName.userFullName.firstName)// accessing value just using dot dot in nested objects
+// const obj1 = {1:"a",2:"b"}
+// const obj2 = {3:"a",4:"b"}
+// const obj5 = {5:"e",5:"t"}
+//concatinating obj1 and obj2
+// syntax of assign is assign(target , source) here we use { } is empty objects to conform that it comes into the curely barcket
+// const obj4= Object.assign({},obj1,obj2,obj5)
+// console.log(obj4);
+// const obj3={...obj1,...obj2}//this best techinque
+// console.log(obj3);
 
-jsUser.greetingTwo = function(){
-    console.log(`Hello js user,${this.name}`)
-}
+const tinderUser={}
+tinderUser.id="122ac"
+tinderUser.name="anuragsingh"
+tinderUser.isLogin=false
 
+
+//this is mostly use for database fetching or anything which is related to databse
+
+const users = [
+    {
+       id: 1,
+       email: "h@gamil.com",
+
+    } ,
+    {
+        id: 1,
+        email: "h@gamil.com",
+ 
+     },
+     {
+        id: 1,
+        email: "h@gamil.com",
+ 
+     },
+     {
+        id: 1,
+        email: "h@gamil.com",
+ 
+     },
+    ]
+  users[1].email ; 
+  console.log(tinderUser);
+  console.log(Object.keys(tinderUser));
+  console.log(Object.values(tinderUser));
+  console.log(Object.entries(tinderUser));//har ko ek chhota chhot array bana deta hai 
+  console.log(tinderUser.hasOwnProperty('isLogged'));//to check this property exist or not 
+  
